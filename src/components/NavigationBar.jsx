@@ -15,6 +15,7 @@ const NavigationBar = () => {
         <a class="nav-link active" aria-current="page" href="/">Add Employee</a>
         <a class="nav-link" href="/search">Search Employee</a>
         <a class="nav-link" href="/delete">Delete Employee</a>
+        <a class="nav-link" href="/vi">view Employee</a>
         
         
       </div>
