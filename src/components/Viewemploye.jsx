@@ -1,8 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import NavigationBar from './NavigationBar'
 
 const Viewemploye = () => {
+  const [data, ChangeData]=useState(
+
+[
+
+{"emname":"sam","emcode":"01","desi":"Manager"},
+{"emname":"anu","emcode":"01","desi":"HR"},
+{"emname":"vinu","emcode":"01","desi":"Staff"},
+{"emname":"renu","emcode":"01","desi":"Staff"},
+{"emname":"tanu","emcode":"01","desi":"Staff"},
+
+
+
+
+]
+
+  )
   return (
+
     
     <div>
 <NavigationBar />
@@ -12,71 +29,31 @@ const Viewemploye = () => {
       <th scope="col">Name</th>
       <th scope="col">Employee code</th>
       <th scope="col">Phone NO</th>
-      <th scope="col">Designation</th>
+      
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">sam</th>
-      <td>01</td>
-      <td>9675847567</td>
-      <td>HR</td>
-    </tr>
-    <tr>
-      <th scope="row">suni</th>
-      <td>02</td>
-      <td>9675847567</td>
-      <td>Staff</td>
-    </tr>
-    <tr>
-      <th scope="row">anu</th>
-      <td>03</td>
-      <td>9675847567</td>
-      <td>staff</td>
-    </tr>
-    <tr>
-      <th scope="row">manu</th>
-      <td>04</td>
-      <td>9675847567</td>
-      <td>Staff</td>
-    </tr>
-    <tr>
-      <th scope="row">vinu</th>
-      <td>05</td>
-      <td>9675847567</td>
-      <td>HR</td>
-    </tr>
-    <tr>
-      <th scope="row">kannan</th>
-      <td>06</td>
-      <td>9675847567</td>
-      <td>Staff</td>
-    </tr>
-    <tr>
-      <th scope="row">sumu</th>
-      <td>07</td>
-      <td>9675847567</td>
-      <td>staff</td>
+    {data.map(
+
+      (value,index)=>{
+
+        return(
+          <tr>
+      <th scope="row">{value.emname}</th>
+      <td>{value.emcode}</td>
       
+      <td>{value.desi}</td>
     </tr>
-    <tr>
-      <th scope="row">rayan</th>
-      <td>08</td>
-      <td>9675847567</td>
-      <td>Staff</td>
-    </tr>
-    <tr>
-      <th scope="row">anu</th>
-      <td>09</td>
-      <td>9675847567</td>
-      <td>staff</td>
-    </tr>
-    <tr>
-      <th scope="row">karthi</th>
-      <td>10</td>
-      <td>9675847567</td>
-      <td>Staff</td>
-    </tr>
+        )
+      }
+    )}
+    
+    
+    
+    
+    
+    
+    
   </tbody>
 </table>
     </div>
